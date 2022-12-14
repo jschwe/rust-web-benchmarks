@@ -6,3 +6,7 @@ edition = "2021"
 [dependencies]
 viz = { version = "0.2" }
 tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+tokio-metrics = { git = "https://github.com/jschwe/tokio-metrics", branch = "steal_operations",  features = ["rt"], optional = true}
+
+[features]
+metrics = ["tokio-metrics"]

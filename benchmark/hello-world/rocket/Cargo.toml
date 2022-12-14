@@ -5,3 +5,8 @@ edition = "2021"
 
 [dependencies]
 rocket = "0.5.0-rc.2"
+tokio = { version = "1" }
+tokio-metrics = { git = "https://github.com/jschwe/tokio-metrics", branch = "steal_operations",  features = ["rt"], optional = true}
+
+[features]
+metrics = ["tokio-metrics"]

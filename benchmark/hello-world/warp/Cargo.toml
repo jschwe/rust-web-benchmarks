@@ -8,3 +8,7 @@ edition = "2021"
 [dependencies]
 tokio = { version = "1", features = ["full"] }
 warp = "0.3"
+tokio-metrics = { git = "https://github.com/jschwe/tokio-metrics", branch = "steal_operations",  features = ["rt"], optional = true}
+
+[features]
+metrics = ["tokio-metrics"]

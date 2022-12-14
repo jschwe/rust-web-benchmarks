@@ -6,3 +6,7 @@ edition = "2021"
 [dependencies]
 hyper = { version = "0.14", features = ["full"] }
 tokio = { version = "1", features = ["full"] }
+tokio-metrics = { git = "https://github.com/jschwe/tokio-metrics", branch = "steal_operations",  features = ["rt"], optional = true}
+
+[features]
+metrics = ["tokio-metrics"]
